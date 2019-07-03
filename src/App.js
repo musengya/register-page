@@ -4,7 +4,8 @@ import "./App.css";
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="App">
+        <h2>Register Page</h2>
         <form>
           <label>FirstName</label>
           <input type="text" placeholder="Ënter your firstname" />
@@ -21,6 +22,7 @@ class App extends React.Component {
           <label>Repeat Password</label>
           <input type="password" placeholder="Repeat your password" />
           <br />
+          <input type="submit" value="Submit" />
         </form>
       </div>
     )
