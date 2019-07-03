@@ -22,4 +22,5 @@ input[type="password"] {
 }
 input[type="submit"] {
   padding: 10px;
+  font-size: 20px;
 }
