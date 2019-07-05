@@ -2,6 +2,39 @@ import React from "react";
 import "./App.css";
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      firstname:"",
+      lastname:"",
+      email:"",
+      password: ""
+    }
+    this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+    this.handleLastNameChange = this.handleLastNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+  }
+  handleFirstNameChange(e) {
+    this.setState({
+
+    })
+  }
+  handleLastNameChange(e) {
+    this.setState({
+
+    })
+  }
+  handlePasswordChange(e) {
+    this.setState({
+
+    })
+  }
+  handleEmailChange(e) {
+    this.setState({
+
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -22,7 +55,7 @@ class App extends React.Component {
           <label>Repeat Password</label>
           <input type="password" placeholder="Repeat your password" />
           <br /><br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Register" />
         </form>
       </div>
     )
