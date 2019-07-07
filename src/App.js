@@ -18,22 +18,22 @@ class App extends React.Component {
   }
   handleFirstNameChange(e) {
     this.setState({
-
-    })
+      firstname: e.target.value
+    });
   }
   handleLastNameChange(e) {
     this.setState({
-
+lastname: e.target.value
     })
   }
   handlePasswordChange(e) {
     this.setState({
-
+password: e.target.value
     })
   }
   handleEmailChange(e) {
     this.setState({
-
+email: e.target.value
     })
   }
   render() {
