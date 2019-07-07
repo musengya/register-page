@@ -10,4 +10,5 @@ describe("App", () => {
 
         expect(getByText("Register Page")).toBeDefined();
     });
+    
 })
