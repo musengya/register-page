@@ -10,5 +10,17 @@ describe("App", () => {
 
         expect(getByText("Register Page")).toBeDefined();
     });
-    
+    test("displays all form inputs", () => {
+        const { getByText } = render(<App />);
+        
+        expect(getByText("FirstName")).toBeDefined();
+
+        expect(getByText("LastName")).toBeDefined();
+        
+        expect(getByText("Email")).toBeDefined();
+        
+        expect(getByText("Password")).toBeDefined();
+        
+        expect(getByText("Repeat Password")).toBeDefined();
+    })
 })
