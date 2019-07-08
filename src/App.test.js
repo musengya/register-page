@@ -8,7 +8,7 @@ describe("App", () => {
     test("displays correct title", () => {
         const { getByText } = render(<App />);
 
-        expect(getByText("Registration Page")).toBeDefined();
+        expect(getByText("Registration page")).toBeDefined();
     });
     test("displays all form inputs", () => {
         const { getByText } = render(<App />);
