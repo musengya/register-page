@@ -2,19 +2,34 @@ import React from "react";
 import "./App.css";
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      firstname:"",
-      lastname:"",
-      email:"",
-      password: ""
-      
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+      error: ""
+
     }
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  dismissError() {
+    this.setState({
+        error: ""
+    });
+}
+  handleSubmit(e) {
+    e.preventDefault();
+    if (!this.state.firstname) {
+      return this.setState({
+        error: "Firstname is required"
+      });
+    }
   }
   handleFirstNameChange(e) {
     this.setState({
@@ -23,24 +38,27 @@ class App extends React.Component {
   }
   handleLastNameChange(e) {
     this.setState({
-lastname: e.target.value
+      lastname: e.target.value
     })
   }
   handlePasswordChange(e) {
     this.setState({
-password: e.target.value
+      password: e.target.value
     })
   }
   handleEmailChange(e) {
     this.setState({
-email: e.target.value
+      email: e.target.value
     })
   }
   render() {
     return (
       <div className="App">
         <h2>Register Page</h2>
-        <form>
+        <form onSubmit={this.handleSubmit}>
+          {
+            this.state.error &&
+            <h2><button onClick={this.dismissError}>x</button>{this.state.error}</h2>}
           <label>FirstName</label>
           <input
             type="text"
