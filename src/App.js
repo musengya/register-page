@@ -17,6 +17,7 @@ class App extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.dismissError = this.dismissError.bind(this);
   }
   dismissError() {
     this.setState({
