@@ -8,19 +8,18 @@ describe("App", () => {
     test("displays correct title", () => {
         const { getByText } = render(<App />);
 
-        expect(getByText("Register Page")).toBeDefined();
+        expect(getByText("Registration Page")).toBeDefined();
     });
     test("displays all form inputs", () => {
         const { getByText } = render(<App />);
         
-        expect(getByText("FirstName")).toBeDefined();
+        expect(getByText("Name")).toBeDefined();
 
-        expect(getByText("LastName")).toBeDefined();
+        expect(getByText("Email ID:")).toBeDefined();
         
-        expect(getByText("Email")).toBeDefined();
+        expect(getByText("Mobile No:")).toBeDefined();
         
         expect(getByText("Password")).toBeDefined();
         
-        expect(getByText("Repeat Password")).toBeDefined();
     })
 })
