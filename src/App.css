@@ -24,3 +24,7 @@ input[type="submit"] {
   padding: 10px;
   font-size: 20px;
 }
+.errorMsg {
+  color: #cc0000;
+  margin-bottom: 12px;
+}
