@@ -21,5 +21,8 @@ describe("App", () => {
         
         expect(getByText("Password")).toBeDefined();
         
-    })
+    });
+    test("displays an error when no value is input", () => {
+     
+    });
 })
