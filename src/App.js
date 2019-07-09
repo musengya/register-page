@@ -112,13 +112,14 @@ class App extends React.Component {
             <input
               type="text"
               name="username"
-              data-testid="user-input"
+              data-testid="name-input"
               value={this.state.fields.username}
               onChange={this.handleChange} />
             <div className="errorMsg">{this.state.errors.username}</div>
             <label>Email ID:</label>
             <input type="text"
               name="emailid"
+              data-testid="email-input"
               value={this.state.fields.emailid}
               onChange={this.handleChange} />
             <div className="errorMsg">{this.state.errors.emailid}</div>
@@ -126,6 +127,7 @@ class App extends React.Component {
             <input
               type="text"
               name="mobileno"
+              data-testid="mobile-input"
               value={this.state.fields.mobileno}
               onChange={this.handleChange} />
             <div className="errorMsg">{this.state.errors.mobileno}</div>
@@ -133,11 +135,13 @@ class App extends React.Component {
             <input
               type="password"
               name="password"
+              data-testid="pass-input"
               value={this.state.fields.password}
               onChange={this.handleChange} />
             <div className="errorMsg">{this.state.errors.password}</div>
             <input
               type="submit"
+              data-testid="submit-button"
               className="button"
               value="Register" />
           </form>
