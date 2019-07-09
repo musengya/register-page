@@ -112,6 +112,7 @@ class App extends React.Component {
             <input
               type="text"
               name="username"
+              data-testid="user-input"
               value={this.state.fields.username}
               onChange={this.handleChange} />
             <div className="errorMsg">{this.state.errors.username}</div>
