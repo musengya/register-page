@@ -112,7 +112,6 @@ class App extends React.Component {
             <input
               type="text"
               name="username"
-            
               value={this.state.fields.username}
               onChange={this.handleChange} />
             <div className="errorMsg">{this.state.errors.username}</div>
